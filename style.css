@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.sidebar {
+  width: 300px;
+  height: 100vh;
+  background-color: #11283f;
+  /* background-color: #343a40; */
+  color: white;
+  position: fixed;
+  transform: translateX(0);
+  z-index:1111;
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar.hide {
+  transform: translateX(-250px);
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 10px 15px;
+}
+
+/* .sidebar a.active {
+  background-color: green;
+  color: white;
+} */
+
+.sidebar a:hover {
+  background-color: #0e7fef;
+}
+
+.content {
+  margin-left: 250px;
+  padding: 20px;
+  flex: 1;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.content.shift {
+  margin-left: 0;
+}
+
+.header {
+  background-color: #f8f9fa;
+  padding: 15px;
+  height: 50px;
+  position: fixed;
+  width: 100%;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content-area {
+  margin-top: 70px;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #343a40;
+  display: none;
+}
+
+
+
+.profile-container {
+  position: relative;
+  display: inline-block;
+}
+
+.profile-popup {
+  height: 80px;
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-90%);
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 100;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-container:hover .profile-popup {
+  display: block;
+}
+
+
+
+img {
+    max-height: 400px;
+  }
+  .basic-ratings svg {
+width: 32px;
+height: 32px;
+}
+.testimonial {
+text-align: center;
+padding: 20px;
+}
+
+.testimonial p {
+font-style: italic;
+color: #555;
+}
+
+.customer-info {
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 10px;
+}
+
+.customer-image {
+width: 50px;
+height: 50px;
+border-radius: 50%;
+margin-right: 10px;
+}
+
+.customer-name {
+font-weight: bold;
+}
+/* Apply a blue border to the active testimonial */
+/* .swiper-slide-active  + {
+border: 2px solid rgb(81, 111, 230); 
+background-color: #e6f0ff; 
+box-shadow: 0 0 10px rgba(0, 0, 255, 0.2); 
+} */
+#first-ul1 a{
+
+font-weight: bold;
+text-align: center;
+font-size: 1.3rem !important;
+}
+#first-ul{
+font-size: 1.8rem;
+font-weight: bold;
+}
+
+.swiper {
+  width: 100%;
+  padding: 10px 0;
+}
+
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.card {
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%; /* Ensure cards take full width of the slide */
+}
+.s1:hover{
+  transform: scale(1.04);
+}
+
+.card img {
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.card-body {
+  padding: 1px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: start;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #555;
+  text-align: start;
+}
+
+.card-price {
+  font-size: 1.25rem;
+  color: #dc3545;
+  font-weight: bold;
+}
+
+.btn-add-to-cart {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-add-to-cart:hover {
+  background-color: #218838;
+}
+
+/* Arrow Controls */
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  color: #000;
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.swiper-button-next {
+  right: 10px;
+}
+
+.swiper-button-prev {
+  left: 10px;
+}
+
+
+
+/* Responsive styles for small screens */
+@media (max-width: 576px) {
+.basic-ratings svg {
+  width: 14px; /* Smaller width for stars */
+  height: 14px; /* Smaller height for stars */
+  margin-left: 4px; /* Reduce spacing */
+}
+.sidebar {
+  transform: translateX(-300px);
+}
+
+.sidebar.show {
+  transform: translateX(0);
+}
+
+.content {
+  margin-left: 0;
+}
+
+.menu-toggle {
+  display: inline;
+}
+
+
+}

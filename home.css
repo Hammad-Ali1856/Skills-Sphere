@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+  #first-ul1 a{
+
+font-weight: bold;
+text-align: center;
+font-size: 1.3rem !important;
+}
+#first-ul{
+font-size: 1.8rem;
+font-weight: bold;
+}
+
+.swiper {
+  width: 100%;
+  padding: 10px 0;
+}
+
+.swiper-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.card {
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%; /* Ensure cards take full width of the slide */
+}
+  img {
+    max-height: 400px;
+  }
+  .basic-ratings svg {
+width: 32px;
+height: 32px;
+}
+  .testimonial {
+text-align: center;
+padding: 20px;
+}
+
+.testimonial p {
+font-style: italic;
+color: #555;
+}
+
+.customer-info {
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 10px;
+}
+
+.customer-image {
+width: 50px;
+height: 50px;
+border-radius: 50%;
+margin-right: 10px;
+}
+
+.customer-name {
+font-weight: bold;
+}
+ 
